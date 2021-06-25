@@ -15,6 +15,7 @@ type PageVars struct {
 }
 
 func main() {
+	//testing 
 	client := appinsights.NewTelemetryClient(os.Getenv("APPINSIGHTS_INSTRUMENTATIONKEY"))
 	request := appinsights.NewRequestTelemetry("GET", "https://myapp.azurewebsites.net/", 1 , "Success")
 	client.Track(request)	
